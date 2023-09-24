@@ -13,8 +13,18 @@
 		<div class="col-md-4 offset-md-4">
 			<div class="card-body">
 				
-				<form action="#" method="post">
+				<form action="saveUser" method="post">
 					<h1>Register Form</h1>
+					
+					<th:block th:if="${session.msg}">
+						<p class="text-success">[[${session.msg}]]</p>
+						
+						<th:block th:text="${@userServiceImpl.removeMessage}">
+							
+						</th:block>
+						
+					</th:block>
+					
   <div class="mb-3">
 	  
     <label for="exampleInputEmail1" class="form-label">Name</label>
